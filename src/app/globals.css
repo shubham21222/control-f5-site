@@ -2,26 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.custom_container {
+  @apply 2xl:w-[1100px] xl:w-[1100px] lg:w-[80%] md:w-[90%] w-full mx-auto md:px-0 px-[20px] 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+.content_container {
+  @apply 2xl:w-[1100px] xl:w-[1100px] lg:w-[80%] md:w-[90%] w-full mx-auto md:px-0 px-[20px] 
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.custom_container1 {
+  @apply 2xl:w-[1200px] xl:w-[1200px] lg:w-[80%] md:w-[90%] w-full mx-auto md:px-0 px-[20px] 
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+@font-face {
+  font-display: inter;
+  font-family: "inter-regular";
+  src: url("/src/app/fonts/static/Inter_18pt-Light.ttf");
+}
+
+@font-face {
+  font-display: inter;
+  font-family: "inter-bold";
+  src: url("/src/app/fonts/static/Inter_18pt-Bold.ttf");
+}
+
+
+*{
+  font-family: "inter";
 }
