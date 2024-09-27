@@ -2,14 +2,17 @@ import Image from "next/image";
 import React from "react";
 import MainLogo from "../assets/controlF5-logo.webp";
 import NavBar from "../components/NavBar";
-import ContentCard from "../components/ContentCard";
 import TestiMonial from "../components/TestiMonial";
 import PortFolio from "../components/PortFolio";
 import SolvedProblems from "../components/SolvedProblems";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
+import dynamic from "next/dynamic";
 
 const MainPage = () => {
+
+  const ContentCard = dynamic(() => import('../components/ContentCard'));
+
   return (
     <>
       <NavBar />
@@ -19,7 +22,7 @@ const MainPage = () => {
         </div>
         <div className="text-[5vh] text-black font-[400]  pt-6">
           Take Your Digital Presence One Notch Higher
-        </div>
+        </div>  
         <div className="text-[2.8vh]  pt-4 text-center">
           ControlF5 is a leading web designing and development company and we
           adhere to the rules of making sure that our client’s digital presence
@@ -33,12 +36,12 @@ const MainPage = () => {
           like CMS, GIS, etc.
         </div>
       </div>
-      <ContentCard/>
-      <TestiMonial/>
+      {/* <ContentCard/> */}
+      {/* <TestiMonial/>
       <PortFolio/>
       <SolvedProblems/>
-      <HeroSection/>
-      <Footer/>
+      <HeroSection/> */}
+      {/* <Footer/> */}
     </>
   );
 };
